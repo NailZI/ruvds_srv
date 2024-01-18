@@ -70,7 +70,7 @@ async def process_cancel_command_state(message: Message, state: FSMContext):
 # и переводить бота в состояние ожидания ввода имени
 @dp.message(Command(commands='fillform'), StateFilter(default_state))
 async def process_fillform_command(message: Message, state: FSMContext):
-    await message.answer(text='Пожалуйста, введите ваше имя')
+    await message.answer(text='Пожалуйста, введите ваше Имя')
     # Устанавливаем состояние ожидания ввода имени
     await state.set_state(FSMFillForm.fill_name)
 
